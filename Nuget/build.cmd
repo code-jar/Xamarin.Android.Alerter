@@ -1,4 +1,4 @@
-set Version=6.1.0
+set Version=7.0.1
 
 msbuild ../Alerter.Bind/Alerter.Bind.csproj /t:Rebuild /p:Configuration=Release
 
