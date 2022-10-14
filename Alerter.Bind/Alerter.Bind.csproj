@@ -14,7 +14,7 @@
     <AssemblyName>Alerter.Bind</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v13.0</TargetFrameworkVersion>
     <AndroidClassParser>class-parse</AndroidClassParser>
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     <NuGetPackageImportStamp>
@@ -46,13 +46,13 @@
     <Reference Include="System.Numerics.Vectors" />
     <Reference Include="System.Xml" />
     <Reference Include="Xamarin.Jetbrains.Annotations, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Jetbrains.Annotations.22.0.0.2\lib\monoandroid90\Xamarin.Jetbrains.Annotations.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Jetbrains.Annotations.23.0.0.4\lib\monoandroid12.0\Xamarin.Jetbrains.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Kotlin.StdLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Kotlin.StdLib.1.5.31.2\lib\monoandroid90\Xamarin.Kotlin.StdLib.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Kotlin.StdLib.1.7.20\lib\monoandroid12.0\Xamarin.Kotlin.StdLib.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Kotlin.StdLib.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Kotlin.StdLib.Common.1.5.31.2\lib\monoandroid90\Xamarin.Kotlin.StdLib.Common.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Kotlin.StdLib.Common.1.7.20\lib\monoandroid12.0\Xamarin.Kotlin.StdLib.Common.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -61,7 +61,7 @@
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
     <None Include="Additions\AboutAdditions.txt" />
-    <LibraryProjectZip Include="Jars\alerter-7.0.1.aar" />
+    <LibraryProjectZip Include="Jars\alerter-7.2.4.aar" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -70,17 +70,17 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
-  <Import Project="..\packages\Xamarin.Jetbrains.Annotations.22.0.0.2\build\monoandroid90\Xamarin.Jetbrains.Annotations.targets" Condition="Exists('..\packages\Xamarin.Jetbrains.Annotations.22.0.0.2\build\monoandroid90\Xamarin.Jetbrains.Annotations.targets')" />
+  <Import Project="..\packages\Xamarin.Jetbrains.Annotations.23.0.0.4\build\monoandroid12.0\Xamarin.Jetbrains.Annotations.targets" Condition="Exists('..\packages\Xamarin.Jetbrains.Annotations.23.0.0.4\build\monoandroid12.0\Xamarin.Jetbrains.Annotations.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Xamarin.Jetbrains.Annotations.22.0.0.2\build\monoandroid90\Xamarin.Jetbrains.Annotations.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Jetbrains.Annotations.22.0.0.2\build\monoandroid90\Xamarin.Jetbrains.Annotations.targets'))" />
-    <Error Condition="!Exists('..\packages\Xamarin.Kotlin.StdLib.Common.1.5.31.2\build\monoandroid90\Xamarin.Kotlin.StdLib.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Kotlin.StdLib.Common.1.5.31.2\build\monoandroid90\Xamarin.Kotlin.StdLib.Common.targets'))" />
-    <Error Condition="!Exists('..\packages\Xamarin.Kotlin.StdLib.1.5.31.2\build\monoandroid90\Xamarin.Kotlin.StdLib.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Kotlin.StdLib.1.5.31.2\build\monoandroid90\Xamarin.Kotlin.StdLib.targets'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Jetbrains.Annotations.23.0.0.4\build\monoandroid12.0\Xamarin.Jetbrains.Annotations.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Jetbrains.Annotations.23.0.0.4\build\monoandroid12.0\Xamarin.Jetbrains.Annotations.targets'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Kotlin.StdLib.Common.1.7.20\build\monoandroid12.0\Xamarin.Kotlin.StdLib.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Kotlin.StdLib.Common.1.7.20\build\monoandroid12.0\Xamarin.Kotlin.StdLib.Common.targets'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Kotlin.StdLib.1.7.20\build\monoandroid12.0\Xamarin.Kotlin.StdLib.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Kotlin.StdLib.1.7.20\build\monoandroid12.0\Xamarin.Kotlin.StdLib.targets'))" />
   </Target>
-  <Import Project="..\packages\Xamarin.Kotlin.StdLib.Common.1.5.31.2\build\monoandroid90\Xamarin.Kotlin.StdLib.Common.targets" Condition="Exists('..\packages\Xamarin.Kotlin.StdLib.Common.1.5.31.2\build\monoandroid90\Xamarin.Kotlin.StdLib.Common.targets')" />
-  <Import Project="..\packages\Xamarin.Kotlin.StdLib.1.5.31.2\build\monoandroid90\Xamarin.Kotlin.StdLib.targets" Condition="Exists('..\packages\Xamarin.Kotlin.StdLib.1.5.31.2\build\monoandroid90\Xamarin.Kotlin.StdLib.targets')" />
+  <Import Project="..\packages\Xamarin.Kotlin.StdLib.Common.1.7.20\build\monoandroid12.0\Xamarin.Kotlin.StdLib.Common.targets" Condition="Exists('..\packages\Xamarin.Kotlin.StdLib.Common.1.7.20\build\monoandroid12.0\Xamarin.Kotlin.StdLib.Common.targets')" />
+  <Import Project="..\packages\Xamarin.Kotlin.StdLib.1.7.20\build\monoandroid12.0\Xamarin.Kotlin.StdLib.targets" Condition="Exists('..\packages\Xamarin.Kotlin.StdLib.1.7.20\build\monoandroid12.0\Xamarin.Kotlin.StdLib.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

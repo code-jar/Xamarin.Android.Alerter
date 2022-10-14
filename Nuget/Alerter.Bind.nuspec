@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Xamarin.Android.Alerter</id>
-    <version>6.1.0</version>
+    <version>7.2.4</version>
     <authors>ricarod_jar</authors>
     <owners>ricarod_jar</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -10,10 +10,10 @@
 An Android Alerting Library</description>
     <repository type="git" url="https://github.com/code-jar/Xamarin.Android.Alerter" />
     <dependencies>
-      <dependency id="Xamarin.Kotlin.StdLib" version="1.5.31.2" />
+      <dependency id="Xamarin.Kotlin.StdLib" version="1.7.20" />
     </dependencies>
   </metadata>
   <files>  
-    <file src="..\Alerter.Bind\bin\Release\Alerter.Bind.dll" target="lib\monoandroid11\Alerter.Bind.dll" />
+    <file src="..\Alerter.Bind\bin\Release\Alerter.Bind.dll" target="lib\monoandroid13.0\Alerter.Bind.dll" />
   </files>
 </package>
